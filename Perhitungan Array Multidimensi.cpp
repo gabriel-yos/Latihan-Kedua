@@ -6,24 +6,33 @@ int main()
 {
 	//mendeklarasikan array dalam variable
 	int A[2][2], B[2][2], C[2][2];
-	int array1 [5] = { 7, 6, 9, 1, 16 };
-	int array2 [5];
-	int tambah, kurang, kali;
+	cout << "Masukkan Nikal A11 : ";
+	cin >> A[0][0];
+	cout << "Masukkan Nikal A12 : ";
+	cin >> A[0][1];
+	cout << "Masukkan Nikal A21 : ";
+	cin >> A[1][0];
+	cout << "Masukkan Nikal A22 : ";
+	cin >> A[1][1];
 
-	//memberikan nilai beberapa elemen array 2
-	array2[0] = 2;
-	array2[1] = 3;
-	array2[2] = 4;
+	cout << "Masukkan Nikal B11 : ";
+	cin >> B[0][0];
+	cout << "Masukkan Nikal B12 : ";
+	cin >> B[0][1];
+	cout << "Masukkan Nikal B21 : ";
+	cin >> B[1][0];
+	cout << "Masukkan Nikal B22 : ";
+	cin >> B[1][1];
 
-	//membuat persamaan matematika
-	tambah = array1[2] + array2[0];
-	kurang = array1[3] - array2[1];
-	kali = array1[4] * array2[2];
+	//menghitung nilai array
+	C[0][0] = (A[0][0] * B[0][0]) + (A[0][1] * B[1][0]);
+	C[0][1] = (A[0][0] * B[0][1]) + (A[0][1] * B[1][1]);
+	C[1][0] = (A[1][0] * B[0][0]) + (A[1][1] * B[1][0]);
+	C[1][1] = (A[1][0] * B[0][1]) + (A[1][1] * B[1][1]);
 
-	//Menampilkan hasil persamaan
-	cout << "Array[2] + Array[0] = " << tambah << endl;
-	cout << "Array[3] - Array[1] = " << kurang << endl;
-	cout << "Array[4] * Array[2] = " << kali << endl;
+	cout << "Nilai Matrik C adalah: " << endl;
+	cout << " [ " << C[0][0] << " " << C[0][1] << " ]" << endl;
+	cout << " [ " << C[1][0] << " " << C[1][1] << " ]" << endl;
 	system("PAUSE");
 	return 0;
 }
